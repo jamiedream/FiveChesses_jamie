@@ -4,8 +4,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import com.sun.corba.se.impl.orbutil.graph.GraphImpl;
-
 import sun.java2d.loops.FillRect;
 
 import java.awt.BorderLayout;
@@ -29,10 +27,13 @@ public class ChessFrame extends JFrame{
 		
 		setLayout(new BorderLayout());
 		
+		
+		
 		newGame = new JButton("NewGame");
 		exit = new JButton("Exit");
 		JPanel top = new JPanel(new BorderLayout());
 		JPanel topLeft = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		JPanel center = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		JPanel topRight = new JPanel(new FlowLayout(FlowLayout.RIGHT));
 		topLeft.add(newGame);topRight.add(exit);
 		top.add(topLeft, BorderLayout.WEST);
@@ -50,7 +51,7 @@ public class ChessFrame extends JFrame{
 		setResizable(false);
 		setLocationRelativeTo(null);
 		setVisible(true);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		
 		newGame.addActionListener(new ActionListener() {	
 			@Override
@@ -73,6 +74,10 @@ public class ChessFrame extends JFrame{
 	
 	public static void main(String[] args) {
 		new ChessFrame();
+		
+	}
+	public void ChessFrame() {
+		
 		
 	}
 }
