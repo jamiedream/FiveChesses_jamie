@@ -145,7 +145,7 @@ public class Chesses extends JPanel{
 			chessPos[chessCount++]=ch;
 			repaint();
 			
-			String winColor = isBlack?"黑棋":"白棋";;
+			String winColor = isBlack?"黑棋":"白棋";
 			if(isWin()){
 				int re = JOptionPane.showConfirmDialog(
 						null, "恭喜"+winColor+"獲勝! "+"再玩一局?", "遊戲結束",
@@ -177,7 +177,7 @@ public class Chesses extends JPanel{
 		private boolean isWin(){
 			int count = 1;
 
-			//横向向西寻找
+			//横向向西
 		   for(int x=ex-1;x>=0;x--){
 			   Color c=isBlack?Color.black:Color.white;
 			   if(judgeLine(x,ey,c)!=null){
@@ -185,7 +185,7 @@ public class Chesses extends JPanel{
 			   }else break;
 			   
 		   }
-			//横向向東寻找
+			//横向向東
 		   for(int x=ex+1;x<=cols;x++){
 			   Color c=isBlack?Color.black:Color.white;
 			   if(judgeLine(x,ey,c)!=null){
@@ -199,7 +199,7 @@ public class Chesses extends JPanel{
 	    	   count=1;
 		   
 
-		 //直向向上寻找		   
+		 //直向向上		   
 		   for(int y=ey-1;y>=0;y--){
 			   Color c=isBlack?Color.black:Color.white;
 			   if(judgeLine(ex,y,c)!=null){
@@ -208,7 +208,7 @@ public class Chesses extends JPanel{
 				   break;
 		   } 
 		   
-		 //直向向下寻找
+		 //直向向下
 		   for(int y=ey+1;y<=rows;y++){
 			   Color c=isBlack?Color.black:Color.white;
 			   if(judgeLine(ex,y,c)!=null){
@@ -220,7 +220,7 @@ public class Chesses extends JPanel{
 	    	   return true;
 	       else count=1;; 
 		   
-		//西北寻找
+		//西北
 		   for(int x=ex-1,y=ey-1;y>=0&&x>=0;x--,y--){
 			   Color c=isBlack?Color.black:Color.white;
 			   if(judgeLine(x,y,c)!=null){
@@ -228,7 +228,7 @@ public class Chesses extends JPanel{
 			   }else break;
 			   
 		   }
-		 //東南寻找
+		 //東南
 		   for(int x=ex+1,y=ey+1;y>=0&&x>=0;x++,y++){
 			   Color c=isBlack?Color.black:Color.white;
 			   if(judgeLine(x,y,c)!=null){
@@ -240,7 +240,7 @@ public class Chesses extends JPanel{
 	    	   return true;
 	       else count=1;;   
 		 
-		//東北寻找
+		//東北
 		   for(int x=ex+1,y=ey-1;y>=0&&x>=0;x++,y--){
 			   Color c=isBlack?Color.black:Color.white;
 			   if(judgeLine(x,y,c)!=null){
@@ -248,7 +248,7 @@ public class Chesses extends JPanel{
 			   }else break;
 			   
 		   }
-		 //西南寻找
+		 //西南
 		   for(int x=ex-1,y=ey+1;y>=0&&x>=0;x--,y++){
 			   Color c=isBlack?Color.black:Color.white;
 			   if(judgeLine(x,y,c)!=null){
