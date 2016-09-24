@@ -263,7 +263,6 @@ public class Chesses extends JPanel{
 		return false; 
 		
 		}
-	}
-		
+	}		
 	
 }
