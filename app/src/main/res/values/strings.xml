@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FiveInLine</string>
+    <string name="facebook_app_id">298434887207268</string>
+    <string name="action_settings">LogOut</string>
 </resources>

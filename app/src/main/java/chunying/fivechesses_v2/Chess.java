@@ -35,15 +35,19 @@ public class Chess extends View {
     }
 
     @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
+    public void onWindowFocusChanged(boolean hasWindowFocus) {
+        super.onWindowFocusChanged(hasWindowFocus);
         //取得螢幕寬高,span每一格間距,起點
         viewH = getHeight();
         viewW = getWidth();
         span = viewH / rows - 8;
         sx = (viewW - span * rows) / 2;
         sy = (viewH - span * cols ) / 2;
+    }
 
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
 
         //畫棋盤
         p = new Paint();
