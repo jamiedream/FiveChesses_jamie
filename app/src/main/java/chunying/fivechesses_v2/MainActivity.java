@@ -39,10 +39,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(it);
     }
 
-    public void battle(View v) {
-        Intent it = new Intent(this, BattleActivity.class);
-        startActivity(it);
-    }
+
 
     public void setting(View v) {
         isPlay = !isPlay;

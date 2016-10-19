@@ -28,20 +28,7 @@ public class BoardActivity extends AppCompatActivity {
 
     }
 
-    public void zoomin(View view) {
 
-        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) img.getLayoutParams();
-        params.height = 1200;
-        img.requestLayout();
-
-    }
-    public void zoomout(View view) {
-
-        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) img.getLayoutParams();
-        params.height = 1050;
-        img.requestLayout();
-
-    }
 
     @Override
     protected void onResume() {

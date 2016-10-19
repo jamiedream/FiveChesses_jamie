@@ -22,20 +22,7 @@
                 app:cb_color="#555"
                 app:cb_pressedRingWidth="1dip"
                 android:onClick="home"/>
-            <at.markushi.ui.CircleButton
-                android:layout_width="75dip"
-                android:layout_height="75dip"
-                android:src="@drawable/cross48"
-                app:cb_color="#fff"
-                app:cb_pressedRingWidth="1dip"
-                android:onClick="zoomin"/>
-            <at.markushi.ui.CircleButton
-                android:layout_width="75dip"
-                android:layout_height="75dip"
-                android:src="@drawable/minus"
-                app:cb_color="#fff"
-                app:cb_pressedRingWidth="1dip"
-                android:onClick="zoomout"/>
+
 
         </LinearLayout>
 
